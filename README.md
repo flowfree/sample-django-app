@@ -1,14 +1,16 @@
 Bookmarks API
 =============
-
 Sample Django application that provides REST API for bookmarking URLs and websites.
+
+
+Prerequisites
+-------------
+You need to have Python 3.8+ and Pipenv installed on your local machine.
+
 
 Run on development machine
 --------------------------
-
-1.  Change current working directory into the root dir:
-
-        cd sample-django-app
+1.  Change current working directory into the root directory of this repo.
 
 2.  Create virtual environment directory for Pipenv:
 
