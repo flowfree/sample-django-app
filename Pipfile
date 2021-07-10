@@ -9,6 +9,8 @@ django-rest-framework = "*"
 psycopg2 = "*"
 
 [dev-packages]
+pytest = "*"
+pytest-django = "*"
 
 [requires]
 python_version = "3.8"
