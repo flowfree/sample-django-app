@@ -3,7 +3,9 @@ from .base import *
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+    os.getenv('WEBSITE_HOSTNAME'),
+]
 
 DATABASES = {
     'default': {
