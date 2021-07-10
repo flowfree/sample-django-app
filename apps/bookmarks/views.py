@@ -1,9 +1,10 @@
-from rest_framework.decorators import api_view
-from rest_framework.response import Response
+from rest_framework import viewsets
+
+from .models import Bookmark
+from .serializers import BookmarkSerializer
 
 
-@api_view()
-def home(request):
-    return Response({
-        'message': 'Bookmark list'
-    })
+class BookmarkViewSet(viewsets.ModelViewSet):
+    queryset = Bookmark.objects.all()
+    serializer_class = BookmarkSerializer
+

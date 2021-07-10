@@ -20,6 +20,9 @@ from django.contrib import admin
 from django.urls import include, path
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
+from rest_framework import routers
+
+from apps.bookmarks.views import BookmarkViewSet
 
 
 @api_view()
@@ -33,6 +36,9 @@ def home(request):
 
 urlpatterns = [
     path('', home),
-    path('bookmarks', include('apps.bookmarks.urls')),
     path('admin/', admin.site.urls),
 ]
+
+router = routers.SimpleRouter()
+router.register('bookmarks', BookmarkViewSet)
+urlpatterns += router.urls
