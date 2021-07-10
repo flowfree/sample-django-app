@@ -31,6 +31,6 @@ Run on development machine
 6.  Visit `http://localhost:3000` using your browser to open the Browsable API.
 
 
-LICENSE
+License
 -------
 MIT
