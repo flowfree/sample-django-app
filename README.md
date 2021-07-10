@@ -1,6 +1,6 @@
-Bookmarks API
-=============
-Sample Django application that provides REST API for bookmarking URLs and websites.
+Sample Django App
+=================
+Django-powered REST API for bookmarking URLs and websites.
 
 
 Prerequisites
@@ -29,3 +29,8 @@ Run on development machine
         pipenv run ./manage.py runserver 3000
 
 6.  Visit `http://localhost:3000` using your browser to open the Browsable API.
+
+
+LICENSE
+-------
+MIT
