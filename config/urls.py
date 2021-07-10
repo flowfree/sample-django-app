@@ -22,12 +22,6 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
 
-urlpatterns = [
-    path('bookmarks', include('apps.bookmarks.urls')),
-    path('admin/', admin.site.urls),
-]
-
-
 @api_view()
 def home(request):
     t = datetime.now()
@@ -37,5 +31,8 @@ def home(request):
     })
 
 
-if os.getenv('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
-    urlpatterns += [path('', home)]
+urlpatterns = [
+    path('', home),
+    path('bookmarks', include('apps.bookmarks.urls')),
+    path('admin/', admin.site.urls),
+]
