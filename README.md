@@ -18,7 +18,7 @@ Run on development machine
 
 3.  Install dependencies:
 
-        pipenv install
+        pipenv install --dev
 
 4.  Run DB migration:
 
