@@ -39,6 +39,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 ]
 
-router = routers.SimpleRouter()
+router = routers.SimpleRouter(trailing_slash=False)
 router.register('bookmarks', BookmarkViewSet)
 urlpatterns += router.urls
