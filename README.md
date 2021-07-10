@@ -12,7 +12,7 @@ Run on development machine
 --------------------------
 1.  Change current working directory into the root directory of this repo.
 
-2.  Create virtual environment directory for Pipenv:
+2.  Create new virtual environment directory for Pipenv:
 
         mkdir .venv
 
@@ -27,3 +27,5 @@ Run on development machine
 5.  Run the development server on port 3000:
 
         pipenv run ./manage.py runserver 3000
+
+6.  Visit `http://localhost:3000` using your browser to open the Browsable API.
