@@ -30,6 +30,10 @@ Run on development machine
 
 6.  Visit `http://localhost:3000` using your browser to open the Browsable API.
 
+7.  (Optional) run the unit tests:
+
+        pipenv run pytest
+
 
 License
 -------
