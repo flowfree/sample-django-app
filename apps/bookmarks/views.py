@@ -1,6 +1,9 @@
-from django.http import JsonResponse
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
+
+@api_view()
 def home(request):
-    return JsonResponse({
+    return Response({
         'message': 'Bookmark list'
     })

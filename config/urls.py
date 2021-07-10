@@ -15,21 +15,27 @@ Including another URLconf
 """
 from datetime import datetime
 
-from django.http import JsonResponse
 from django.contrib import admin
 from django.urls import path, include
+from django.conf import settings
+from rest_framework.decorators import api_view
+from rest_framework.response import Response
 
 
+urlpatterns = [
+    path('bookmarks', include('apps.bookmarks.urls')),
+    path('admin/', admin.site.urls),
+]
+
+
+@api_view()
 def home(request):
     t = datetime.now()
-    return JsonResponse({
+    return Response({
         'message': 'Bookmark API is up and running.',
         'server_time': t.strftime('%Y-%m-%dT%H:%M:%SZ')
     })
 
 
-urlpatterns = [
-    path('', home),
-    path('bookmarks', include('apps.bookmarks.urls')),
-    path('admin/', admin.site.urls),
-]
+if settings.DEBUG == False:
+    urlpatterns += [path('', home)]
