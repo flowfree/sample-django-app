@@ -22,7 +22,7 @@ from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework import routers
 
-from apps.bookmarks.views import BookmarkViewSet
+from bookmarks.views import BookmarkViewSet
 
 
 @api_view()
