@@ -57,6 +57,7 @@ working/
 .vendors/
 .vscode/
 .ipynb_checkpoints/
+.azure/
 .env
 .venv
 build/
