@@ -14,10 +14,10 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from datetime import datetime
+import os
 
 from django.contrib import admin
-from django.urls import path, include
-from django.conf import settings
+from django.urls import include, path
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 
@@ -37,5 +37,5 @@ def home(request):
     })
 
 
-if settings.DEBUG == False:
+if os.getenv('DJANGO_SETTINGS_MODULE') == 'config.settings.production':
     urlpatterns += [path('', home)]
