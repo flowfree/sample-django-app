@@ -17,3 +17,10 @@ DATABASES = {
         'PASSWORD': os.getenv('DB_PASSWORD'),
     }
 }
+
+# Disable Browsable API
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',
+    )
+}
