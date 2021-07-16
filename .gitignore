@@ -59,7 +59,7 @@ working/
 .ipynb_checkpoints/
 .azure/
 .pytest_cache/
-.ebextension/
+.ebextensions/
 .env
 .venv
 build/
