@@ -59,6 +59,7 @@ working/
 .ipynb_checkpoints/
 .azure/
 .pytest_cache/
+.ebextension/
 .env
 .venv
 build/
@@ -69,3 +70,8 @@ zappa_settings.json
 requirements.txt
 Pipfile.lock
 
+
+# Elastic Beanstalk Files
+.elasticbeanstalk/*
+!.elasticbeanstalk/*.cfg.yml
+!.elasticbeanstalk/*.global.yml
