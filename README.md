@@ -35,6 +35,15 @@ Run on development machine
         pipenv run pytest
 
 
+Deployment
+----------
+
+See the following tutorials for deploying the project:
+
+- [Deploy Django REST API to Azure](https://www.nashruddinamin.com/azure/deploy-django-rest-api-to-azure.html)
+- [Deploy Django REST API to AWS](https://www.nashruddinamin.com/aws/deploy-django-rest-api-to-aws.html) 
+
+
 License
 -------
 MIT
