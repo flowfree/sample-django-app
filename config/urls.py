@@ -13,7 +13,6 @@ Including another URLconf
     1. Import the include() function: from django.urls import include, path
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
-from datetime import datetime
 import os
 
 from django.contrib import admin
@@ -27,10 +26,8 @@ from bookmarks.views import BookmarkViewSet
 
 @api_view()
 def home(request):
-    t = datetime.now()
     return Response({
-        'message': 'Bookmark API is up and running.',
-        'server_time': t.strftime('%Y-%m-%dT%H:%M:%SZ')
+        'message': 'The bookmark API is available at /bookmarks',
     })
 
 
