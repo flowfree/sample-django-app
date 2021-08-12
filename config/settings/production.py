@@ -3,12 +3,12 @@ from .base import *
 
 SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
 DEBUG = False
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 if 'WEBSITE_HOSTNAME' in os.environ:
-    ALLOWED_HOSTS += [os.getenv('WEBSITE_HOSTNAME')]
+    ALLOWED_HOSTS = [os.getenv('WEBSITE_HOSTNAME')]
 if 'APP_HOSTNAME' in os.environ:
-    ALLOWED_HOSTS += [os.getenv('APP_HOSTNAME')]
+    ALLOWED_HOSTS = [os.getenv('APP_HOSTNAME')]
 
 DATABASES = {
     'default': {
